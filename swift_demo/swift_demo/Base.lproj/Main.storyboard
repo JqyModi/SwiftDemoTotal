@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jx-cm-APl">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.78180881069999997" green="1" blue="0.1879595543" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTC-UF-qSZ">
+                                <rect key="frame" x="143" y="269" width="35" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Anim">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1RR-Ah-cMI" kind="modal" id="9FM-UL-tSG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2jx-cm-APl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="2ii-yV-xpC"/>
+                            <constraint firstItem="2jx-cm-APl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="Epk-Zc-oNf"/>
+                            <constraint firstItem="qTC-UF-qSZ" firstAttribute="centerX" secondItem="2jx-cm-APl" secondAttribute="centerX" id="Q1x-Ne-oo0"/>
+                            <constraint firstItem="qTC-UF-qSZ" firstAttribute="centerY" secondItem="2jx-cm-APl" secondAttribute="centerY" id="Zvi-PA-tLN"/>
+                            <constraint firstItem="2jx-cm-APl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pqV-nk-tUE"/>
+                            <constraint firstItem="2jx-cm-APl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zlZ-NQ-BtQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greenView" destination="2jx-cm-APl" id="mSa-mU-Cym"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="368"/>
+        </scene>
+        <!--Anim View Controller-->
+        <scene sceneID="5xY-9n-YoU">
+            <objects>
+                <viewController id="1RR-Ah-cMI" customClass="AnimViewController" customModule="swift_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KIQ-8S-xZq"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJr-ii-xQn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGb-Ys-zZs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEx-P3-r0u">
+                                <rect key="frame" x="20" y="94" width="60" height="30"/>
+                                <state key="normal" title="开始动画"/>
+                                <connections>
+                                    <action selector="startAnim:" destination="1RR-Ah-cMI" eventType="touchUpInside" id="3VY-fI-iex"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9T2-HO-dya">
+                                <rect key="frame" x="270" y="94" width="30" height="30"/>
+                                <state key="normal" title="复位"/>
+                                <connections>
+                                    <action selector="reset:" destination="1RR-Ah-cMI" eventType="touchUpInside" id="dgP-yC-zvC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCP-jT-quy">
+                                <rect key="frame" x="20" y="138" width="280" height="303"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOd-4q-oSB">
+                                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78180881069999997" green="1" blue="0.1879595543" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AOd-4q-oSB" secondAttribute="bottom" constant="255" id="9iz-1V-T6y"/>
+                                    <constraint firstAttribute="trailing" secondItem="AOd-4q-oSB" secondAttribute="trailing" constant="232" id="GgH-pU-aV9"/>
+                                    <constraint firstItem="AOd-4q-oSB" firstAttribute="top" secondItem="XCP-jT-quy" secondAttribute="topMargin" id="Hw5-wH-aL6"/>
+                                    <constraint firstItem="AOd-4q-oSB" firstAttribute="leading" secondItem="XCP-jT-quy" secondAttribute="leadingMargin" id="rcv-4V-OdN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9T2-HO-dya" secondAttribute="trailing" constant="4" id="1Wi-b4-FxD"/>
+                            <constraint firstItem="AJr-ii-xQn" firstAttribute="top" secondItem="XCP-jT-quy" secondAttribute="bottom" constant="127" id="5wj-fc-qCy"/>
+                            <constraint firstItem="zEx-P3-r0u" firstAttribute="top" secondItem="KIQ-8S-xZq" secondAttribute="bottom" constant="74" id="C18-jj-voe"/>
+                            <constraint firstItem="zEx-P3-r0u" firstAttribute="baseline" secondItem="9T2-HO-dya" secondAttribute="baseline" id="OoT-kO-Vrh"/>
+                            <constraint firstItem="XCP-jT-quy" firstAttribute="top" secondItem="zEx-P3-r0u" secondAttribute="bottom" constant="14" id="VtS-c3-knI"/>
+                            <constraint firstAttribute="trailing" secondItem="XCP-jT-quy" secondAttribute="trailing" constant="20" id="aJf-Vg-GN4"/>
+                            <constraint firstItem="XCP-jT-quy" firstAttribute="leading" secondItem="zEx-P3-r0u" secondAttribute="leading" id="hXQ-ea-scm"/>
+                            <constraint firstItem="zEx-P3-r0u" firstAttribute="leading" secondItem="cGb-Ys-zZs" secondAttribute="leadingMargin" constant="4" id="nVV-8o-oOA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canMoveView" destination="XCP-jT-quy" id="vvR-vI-1qk"/>
+                        <outlet property="reset" destination="9T2-HO-dya" id="6e2-Q6-hF3"/>
+                        <outlet property="startAnim" destination="zEx-P3-r0u" id="ZXu-8J-YcV"/>
+                        <outlet property="subView1" destination="AOd-4q-oSB" id="nsg-2T-kCA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJi-mb-4PC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="397"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1yq-Xw-SKx">
+            <objects>
+                <viewController id="kuV-bJ-9Q9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gV1-XR-pJA"/>
+                        <viewControllerLayoutGuide type="bottom" id="E31-k9-5xj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AJ5-SV-Jt3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfL-mO-mfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="397"/>
+        </scene>
+    </scenes>
+</document>
